@@ -3,8 +3,13 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/', (request, response, next) => {
+	const order = {
+		productId: request.body.productId,
+		quantity: request.body.quantity
+	}
     response.status(200).json({
-        message: 'orders were received'
+        message: 'orders were received',
+        order: order
     });
 });
 
