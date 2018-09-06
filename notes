@@ -13,3 +13,4 @@ const router = express.Router();
 
 
 
+once you install nodemon (npm install --save-dev nodemon), youll go to package.json and add "start": "nodemon server.js"
