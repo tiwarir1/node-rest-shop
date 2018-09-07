@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=blQ60skPzl0&index=2&list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q
+
 npm install --save express
 
 app.use -> use as a method sets up a middleware. So, an incoming request has to go through use and whatever we pass to it.
@@ -7,4 +9,13 @@ module.exports = app; - it'll send the return values of app.js to any file that 
 
 
 to test the http requests, install the postman application. getpostman.com
+
+_____________
+
+https://www.youtube.com/watch?v=FV1Ugv1Temg&index=3&list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q
+
+const router = express.Router();
+router is a sub package in express?? it helps us in reaching out and managing several endpoints with HTTP verbs
+
+______________
 
