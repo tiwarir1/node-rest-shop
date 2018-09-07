@@ -1,0 +1,10 @@
+npm install --save express
+
+app.use -> use as a method sets up a middleware. So, an incoming request has to go through use and whatever we pass to it.
+app.use((request, response, next)) - next is also a function here that'll execute the request to move to a next middleware in line. if you don't execute it, the request will not go there.
+
+module.exports = app; - it'll send the return values of app.js to any file that is importing app.js
+
+
+to test the http requests, install the postman application. getpostman.com
+
