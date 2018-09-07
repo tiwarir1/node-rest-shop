@@ -1,1 +1,0 @@
-# node-rest-shop
