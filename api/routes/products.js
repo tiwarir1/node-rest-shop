@@ -1,5 +1,9 @@
 const express= require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
+
+const Product = require('../models/product');
+
 
 //look at app.js for productRoutes and app.use('/products', productRoutes)
 //if we do '/products', it'll make the url /products/products
@@ -10,10 +14,20 @@ router.get('/', (request, response, next) => {
 });
 
 router.post('/', (request, response, next) => {
-	const product = {
+	
+	const product = new Product({
+		_id: new mongoose.Types.ObjectId(),
 		name: request.body.name,
 		price: request.body.price
-	};
+	});
+
+	product
+	.save()
+	.then(result => {
+		console.log(result);
+	})
+	.catch(err => console.log(err));
+
 	response.status(201).json({
 		message: 'products submitted',
 		createdProduct: product
